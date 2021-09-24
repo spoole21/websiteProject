@@ -1,0 +1,28 @@
+/***********************************************************************
+* Global classes
+* These can be used for any situation
+************************************************************************/
+
+.hidden{
+    display: none !important
+}
+
+/**********************************************************************
+* Top Navigation Bar
+* This navigation bar will hold the side menu. 
+***********************************************************************/
+.topNavBar{
+    display: flex; 
+    background-color: black;
+    position: fixed; /* Stay in place */ 
+    top: 0px;
+    left: 0px;
+    width: 100%; /* Wide as the screen */
+    z-index: 200; /* Stay in the top */
+}
+
+.navBarLeftItems{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
