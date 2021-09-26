@@ -7,17 +7,33 @@
     display: none !important
 }
 
+.disabled{
+    pointer-events: none;
+}
+
+*:focus {
+    border: 3px solid #94BFF9 !important;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 
+       0 0 3px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+  }
+  button::-moz-focus-inner {
+    border: 0;
+  }
+
 /**********************************************************************
 * Top Navigation Bar
 * This navigation bar will hold the side menu. 
 ***********************************************************************/
 .topNavBar{
     display: flex; 
-    background-color: black;
+    background-color:black;
     position: fixed; /* Stay in place */ 
     top: 0px;
     left: 0px;
     width: 100%; /* Wide as the screen */
+    align-items: center;
     z-index: 200; /* Stay in the top */
 }
 
@@ -25,4 +41,109 @@
     display: flex;
     margin-right: auto;
     align-items: center;
+}
+
+.navBarBtn{
+    background-color: transparent;
+    border: none;
+}
+
+.navBarBtnIcon{
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.navBarAppIcon{
+    height: 38px;
+    width: 38px;
+}
+
+.navBarTitle{
+    margin: 0px 0px 0px 4px;
+    color: white;
+    font-size: 26px;
+}
+
+/*****************************************************************************
+* Box Model 
+* This will contain the following: About me, images of projects, 
+* as well as text about each project that I made
+******************************************************************************/
+
+.boxModel{
+    background-color: black;
+    width: 700px;
+    height: 350px;
+    border: 15px solid red;
+    padding: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container {
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    z-index: 150;
+    display: flex; 
+}
+
+/*******************************************************************************
+* Side Menu:
+* This will contain three main items: About Me Page, Projects Page
+* Contact info. 
+********************************************************************************/
+.sideMenu{
+    position: fixed; /* * stay in place */ 
+    top: 56px; /* below navbar */
+    padding: 0;
+    margin: 0; /* remove margins */
+    z-index: 200; /* menu will stay near the front */
+    left: 0px; 
+    height: 100%;
+    width: 250px;
+    overflow: hidden;
+    background-color: black;
+    list-style-type: none;
+    transition: 0.5s;
+    width: 0px;
+}
+.sideMenuOpen{
+    width: 250px;
+    height: 100%;
+}
+
+.sideMenu li{
+    padding: 24px 0px 24px 24px;
+    font-size: 18px;
+}
+.sideMenu li:hover{
+    cursor: pointer;
+    background-color: black;
+    color:white;
+}
+/*************************************************************************
+* Menu Pages for each menu item
+*
+*************************************************************************/
+.menuPage{
+    padding-top: 100px;
+}
+.menuPageHeader{
+    text-align: center;
+    font-size: 48px;
+}
+.menuPageContent{
+    text-align: center;
+    font-size: 24px;
+}
+.menuPageImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px
 }
